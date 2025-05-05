@@ -7,6 +7,8 @@ package pbo;
 public class App {
 
   public static void main(String[] args) {
-    // your codes
+    String persistenceUnitName = "study_plan_pu";
+
+    (new Simulator(persistenceUnitName)).run();
   }
 }

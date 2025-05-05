@@ -1,0 +1,54 @@
+{
+  "tests": [
+    {
+      "name": "f01&#45;01&#45;01",
+      "setup": "make -s compile",
+      "run": "make -s test_01",
+      "input": "student-add#12S21001#Dhino Turnip#S1 Sistem Informasi\r\nstudent-add#21S21001#Samuel Purba#S1 Manajemen Rekayasa\r\nstudent-add#12S21002#Marudut Tampubolon#S1 Sistem Informasi\r\nstudent-show-all\r\n---\r\n",
+      "output": "12S21001|Dhino Turnip|S1 Sistem Informasi\r\n12S21002|Marudut Tampubolon|S1 Sistem Informasi\r\n21S21001|Samuel Purba|S1 Manajemen Rekayasa\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 20
+    },
+    {
+      "name": "f01&#45;02&#45;01",
+      "setup": "make -s compile",
+      "run": "make -s test_01",
+      "input": "student-add#12S21001#Dhino Turnip#S1 Sistem Informasi\r\nstudent-add#21S21001#Samuel Purba#S1 Manajemen Rekayasa\r\nstudent-add#12S21002#Marudut Tampubolon#S1 Sistem Informasi\r\nstudent-show-all\r\ncourse-add#10S2201#Aljabar Linier#4#3\r\ncourse-add#10S2202#Jaringan Komputer#4#3\r\ncourse-add#10S2203#Sistem Operasi#4#3\r\ncourse-add#12S2201#Analisis dan Desain Sistem#4#3\r\ncourse-add#12S2202#Interaksi Manusia-Komputer#4#3\r\ncourse-add#12S2203#Pemrograman Berorientasi Objek#4#3\r\ncourse-add#KUS3001#Analisis Dampak Lingkungan#6#2\r\ncourse-add#10S1002#Pemrograman Prosedural#2#2\r\ncourse-show-all\r\n---\r\n",
+      "output": "12S21001|Dhino Turnip|S1 Sistem Informasi\r\n12S21002|Marudut Tampubolon|S1 Sistem Informasi\r\n21S21001|Samuel Purba|S1 Manajemen Rekayasa\r\n10S1002|Pemrograman Prosedural|2|2\r\n10S2201|Aljabar Linier|4|3\r\n10S2202|Jaringan Komputer|4|3\r\n10S2203|Sistem Operasi|4|3\r\n12S2201|Analisis dan Desain Sistem|4|3\r\n12S2202|Interaksi Manusia-Komputer|4|3\r\n12S2203|Pemrograman Berorientasi Objek|4|3\r\nKUS3001|Analisis Dampak Lingkungan|6|2\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 20
+    },
+    {
+      "name": "f01&#45;02&#45;02",
+      "setup": "make -s compile",
+      "run": "make -s test_01",
+      "input": "student-add#12S21001#Dhino Turnip#S1 Sistem Informasi\r\nstudent-add#21S21001#Samuel Purba#S1 Manajemen Rekayasa\r\nstudent-add#12S21002#Marudut Tampubolon#S1 Sistem Informasi\r\nstudent-add#12S21002#Marwudut Tampubolon#S1 Sistem Informasi\r\nstudent-show-all\r\ncourse-add#10S2201#Aljabar Linier#4#3\r\ncourse-add#10S2202#Jaringan Komputer#4#3\r\ncourse-add#10S2203#Sistem Operasi#4#3\r\ncourse-add#12S2201#Analisis dan Desain Sistem#4#3\r\ncourse-add#12S2202#Interaksi Manusia-Komputer#4#3\r\ncourse-add#12S2203#Pemrograman Berorientasi Objek#4#3\r\ncourse-add#KUS3001#Analisis Dampak Lingkungan#6#2\r\ncourse-add#10S1002#Pemrograman Prosedural#2#2\r\ncourse-add#10S1002#Pemrograman Prosedural#2#2\r\ncourse-show-all\r\n---\r\n",
+      "output": "12S21001|Dhino Turnip|S1 Sistem Informasi\r\n12S21002|Marudut Tampubolon|S1 Sistem Informasi\r\n21S21001|Samuel Purba|S1 Manajemen Rekayasa\r\n10S1002|Pemrograman Prosedural|2|2\r\n10S2201|Aljabar Linier|4|3\r\n10S2202|Jaringan Komputer|4|3\r\n10S2203|Sistem Operasi|4|3\r\n12S2201|Analisis dan Desain Sistem|4|3\r\n12S2202|Interaksi Manusia-Komputer|4|3\r\n12S2203|Pemrograman Berorientasi Objek|4|3\r\nKUS3001|Analisis Dampak Lingkungan|6|2\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 20
+    },
+    {
+      "name": "f01&#45;03&#45;01",
+      "setup": "make -s compile",
+      "run": "make -s test_01",
+      "input": "student-add#12S21001#Dhino Turnip#S1 Sistem Informasi\r\nstudent-add#21S21001#Samuel Purba#S1 Manajemen Rekayasa\r\nstudent-add#12S21002#Marudut Tampubolon#S1 Sistem Informasi\r\ncourse-add#KUS3001#Analisis Dampak Lingkungan#6#2\r\ncourse-add#10S2201#Aljabar Linier#4#3\r\ncourse-add#10S2202#Jaringan Komputer#4#3\r\ncourse-add#10S2203#Sistem Operasi#4#3\r\ncourse-add#12S2201#Analisis dan Desain Sistem#4#3\r\ncourse-add#12S2202#Interaksi Manusia-Komputer#4#3\r\ncourse-add#12S2203#Pemrograman Berorientasi Objek#4#3\r\ncourse-add#10S1002#Pemrograman Prosedural#2#2\r\nenroll#12S21001#KUS3001\r\nenroll#12S21001#10S2201\r\nenroll#12S21001#10S2202\r\nenroll#12S21001#10S2203\r\nenroll#12S21001#12S2201\r\nenroll#12S21001#12S2202\r\nenroll#12S21001#12S2203\r\nenroll#12S21002#10S1002\r\nenroll#12S21002#10S2201\r\nenroll#12S21002#10S2202\r\nenroll#12S21002#10S2203\r\nenroll#12S21002#12S2201\r\nenroll#12S21002#12S2202\r\nenroll#12S21002#12S2203\r\nstudent-show#12S21001\r\nstudent-show#12S21002\r\n---\r\n",
+      "output": "12S21001|Dhino Turnip|S1 Sistem Informasi\r\n10S2201|Aljabar Linier|4|3\r\n10S2202|Jaringan Komputer|4|3\r\n10S2203|Sistem Operasi|4|3\r\n12S2201|Analisis dan Desain Sistem|4|3\r\n12S2202|Interaksi Manusia-Komputer|4|3\r\n12S2203|Pemrograman Berorientasi Objek|4|3\r\nKUS3001|Analisis Dampak Lingkungan|6|2\r\n12S21002|Marudut Tampubolon|S1 Sistem Informasi\r\n10S1002|Pemrograman Prosedural|2|2\r\n10S2201|Aljabar Linier|4|3\r\n10S2202|Jaringan Komputer|4|3\r\n10S2203|Sistem Operasi|4|3\r\n12S2201|Analisis dan Desain Sistem|4|3\r\n12S2202|Interaksi Manusia-Komputer|4|3\r\n12S2203|Pemrograman Berorientasi Objek|4|3\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 20
+    },
+    {
+      "name": "f01&#45;03&#45;02",
+      "setup": "make -s compile",
+      "run": "make -s test_01",
+      "input": "student-add#12S21001#Dhino Turnip#S1 Sistem Informasi\r\nstudent-add#21S21001#Samuel Purba#S1 Manajemen Rekayasa\r\nstudent-add#12S21002#Marudut Tampubolon#S1 Sistem Informasi\r\nstudent-add#21S21099#Samwel Purba#S1 Manajemen Rekayasa\r\ncourse-add#KUS3001#Analisis Dampak Lingkungan#6#2\r\ncourse-add#10S2201#Aljabar Linier#4#3\r\ncourse-add#10S2202#Jaringan Komputer#4#3\r\ncourse-add#10S2203#Sistem Operasi#4#3\r\ncourse-add#12S2201#Analisis dan Desain Sistem#4#3\r\ncourse-add#12S2202#Interaksi Manusia-Komputer#4#3\r\ncourse-add#12S2201#Analisis dan Desain Sistem#4#3\r\ncourse-add#12S2203#Pemrograman Berorientasi Objek#4#3\r\ncourse-add#10S1002#Pemrograman Prosedural#2#2\r\nenroll#12S21001#KUS3001\r\nenroll#12S21001#10S2201\r\nenroll#12S21001#10S2202\r\nenroll#12S21001#10S2203\r\nenroll#12S21001#12S2201\r\nenroll#12S21001#12S2202\r\nenroll#12S21001#12S2203\r\nenroll#12S21002#10S1002\r\nenroll#12S21002#10S2201\r\nenroll#12S21002#10S2202\r\nenroll#12S21002#10S2203\r\nenroll#12S21002#12S2201\r\nenroll#12S21002#12S2202\r\nenroll#12S21002#12S2203\r\nstudent-show#12S21001\r\ncourse-show-all\r\nstudent-show#12S21002\r\nstudent-show-all\r\n---\r\n",
+      "output": "12S21001|Dhino Turnip|S1 Sistem Informasi\r\n10S2201|Aljabar Linier|4|3\r\n10S2202|Jaringan Komputer|4|3\r\n10S2203|Sistem Operasi|4|3\r\n12S2201|Analisis dan Desain Sistem|4|3\r\n12S2202|Interaksi Manusia-Komputer|4|3\r\n12S2203|Pemrograman Berorientasi Objek|4|3\r\nKUS3001|Analisis Dampak Lingkungan|6|2\r\n10S1002|Pemrograman Prosedural|2|2\r\n10S2201|Aljabar Linier|4|3\r\n10S2202|Jaringan Komputer|4|3\r\n10S2203|Sistem Operasi|4|3\r\n12S2201|Analisis dan Desain Sistem|4|3\r\n12S2202|Interaksi Manusia-Komputer|4|3\r\n12S2203|Pemrograman Berorientasi Objek|4|3\r\nKUS3001|Analisis Dampak Lingkungan|6|2\r\n12S21002|Marudut Tampubolon|S1 Sistem Informasi\r\n10S1002|Pemrograman Prosedural|2|2\r\n10S2201|Aljabar Linier|4|3\r\n10S2202|Jaringan Komputer|4|3\r\n10S2203|Sistem Operasi|4|3\r\n12S2201|Analisis dan Desain Sistem|4|3\r\n12S2202|Interaksi Manusia-Komputer|4|3\r\n12S2203|Pemrograman Berorientasi Objek|4|3\r\n12S21001|Dhino Turnip|S1 Sistem Informasi\r\n12S21002|Marudut Tampubolon|S1 Sistem Informasi\r\n21S21001|Samuel Purba|S1 Manajemen Rekayasa\r\n21S21099|Samwel Purba|S1 Manajemen Rekayasa\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 20
+    }
+  ]
+}
